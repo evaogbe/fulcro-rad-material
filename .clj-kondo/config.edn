@@ -1,0 +1,2 @@
+{:lint-as {com.fulcrologic.rad.form/with-field-context clojure.core/let
+           com.fulcrologic.fulcro.algorithms.normalized-state/swap!-> clojure.core/->}}
