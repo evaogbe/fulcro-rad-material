@@ -7,14 +7,14 @@ forms, reports, and containers for a web UI. It leverages [Material UI](https://
 easy to theme.
 
 Mostly a drop-in replacement for
-[Semantic UI rendering plugin v1.2.21](https://github.com/fulcrologic/fulcro-rad-semantic-ui).
+[Semantic UI rendering plugin](https://github.com/fulcrologic/fulcro-rad-semantic-ui) v1.2.21.
 All plugin-specific options must be nested under `rendering-options`. Also adds a few things, such
 as additional formatters and options. See the config file and the documentation for the options
 files for more info.
 
 ## Version Compatibility
 
-- Fulcro RAD v1.3.13
+- Fulcro RAD v1.4
 - Material UI 5
 
 ## Stability Status
@@ -25,9 +25,19 @@ not yet been used in production. Use at your own risk.
 
 ## Usage
 
-Add this library to your Fulcro project and run:
+Add this library to your Fulcro project.
 
+Install the Material UI JS libraries.
+
+**npm:**
+
+```console
+npm install --save  @mui/material @emotion/react @emotion/styled @mui/icons-material
 ```
+
+**yarn:**
+
+```console
 yarn add @mui/material @emotion/react @emotion/styled @mui/icons-material
 ```
 
@@ -38,7 +48,7 @@ add the Roboto font.
 Install the controls on your RAD app:
 
 ```clojure
-(ns com.example.main
+(ns com.example.app.client
   (:require
     [com.fulcrologic.rad.application :as rad-app]
     [ogbe.fulcro.rad.mui :as mr]))
@@ -60,6 +70,7 @@ add the localization provider to your root component:
 (ns com.example.app.root
   (:require
     [com.fulcrologic.fulcro.components :refer [defsc]]
+    [ogbe.fulcro.mui.date-pickers.localization-provider :refer [ui-localization-provider]]
     ;; For date-fns
     [ogbe.fulcro.mui.date-pickers.adapter-date-fns :refer [adapter-date-fns]]
     ;; or for Day.js
@@ -67,8 +78,7 @@ add the localization provider to your root component:
     ;; or for Luxon
     [ogbe.fulcro.mui.date-pickers.adapter-luxon :refer [adapter-luxon]]
     ;; or for Moment.js
-    [ogbe.fulcro.mui.date-pickers.adapter-moment :refer [adapter-moment]]
-    [ogbe.fulcro.mui.date-pickers.localization-provider :refer [ui-localization-provider]]))
+    [ogbe.fulcro.mui.date-pickers.adapter-moment :refer [adapter-moment]]))
 
 (defsc Root [this props]
   (ui-localization-provider
