@@ -14,8 +14,8 @@ files for more info.
 
 ## Version Compatibility
 
-- Fulcro RAD v1.4
-- Material UI 5
+- Fulcro RAD v1.6
+- Material UI 6
 
 ## Stability Status
 

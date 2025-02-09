@@ -1,9 +1,9 @@
 {:paths ["src"]
- :deps {com.fulcrologic/fulcro {:mvn/version "3.6.3"}
-        com.fulcrologic/fulcro-rad {:mvn/version "1.4.8"}
-        com.taoensso/timbre {:mvn/version "6.1.0"}
-        net.clojars.eoogbe/fulcro-material {:mvn/version "0.1.0-alpha0"}
-        org.clojure/clojure  {:mvn/version "1.11.1"}}
- :aliases {:build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.4"}
+ :deps {com.fulcrologic/fulcro {:mvn/version "3.8.2"}
+        com.fulcrologic/fulcro-rad {:mvn/version "1.6.9"}
+        com.taoensso/timbre {:mvn/version "6.6.1"}
+        net.clojars.eoogbe/fulcro-material {:mvn/version "0.1.0-alpha1"}
+        org.clojure/clojure  {:mvn/version "1.12.0"}}
+ :aliases {:build {:deps {io.github.clojure/tools.build {:mvn/version "0.10.6"}
                           slipset/deps-deploy {:mvn/version "RELEASE"}}
                    :ns-default build}}}

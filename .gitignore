@@ -1,5 +1,6 @@
 *.pom.asc
-.clj-kondo/.cache/
+.clj-kondo/*
+!.clj-kondo/config.edn
 .cpcache/
 .lsp/
 target/
